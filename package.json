@@ -1,0 +1,12 @@
+{
+  "name": "type-safe-in-javascript",
+  "version": "1.0.0",
+  "author": "t7yang <t7yang@gmail.com>",
+  "scripts": {
+    "check": "tsc --project jsconfig.json",
+    "check:watch": "tsc --watch --project jsconfig.json"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
+}
