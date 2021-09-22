@@ -2,11 +2,11 @@
 
 TypeScript is one of the popular transpile language to JavaScript that provide type safety feature, but not only TypeScript itself can get the benefit from type safety, but the entire JavaScript community.
 
-This article aim to introduce how to make JavaScript project type safe with JSDoc, TypeScript, and VSCode. Not only make you project more robust, but these technique also can enhance your DX. The premise is that you don't think type is a burden.
+This article aim to introduce how to make JavaScript project type safe with [JSDoc](https://jsdoc.app/), [TypeScript](https://www.typescriptlang.org/), and [VSCode](https://code.visualstudio.com/). Not only make your project more robust, but these technique also can enhance your DX. The premise is that you don't think type is a burden.
 
 This article cover about:
 
-- Common use of JSDoc tags for type definition.
+- Commonly used of JSDoc tags for type definition.
 - How to reuse type by import from other files.
 - How to type your data efficiently with converter.
 - How to setup and enabled statically type checking in VSCode and compile time checking with `tsc`.
@@ -473,9 +473,9 @@ const handler = async (req, rep) => {
 
 ### Convert JSON data into types
 
-Not only for library, something you need to type your API response data, how to make this process more efficiently.
+Not only for library, sometime you need to type your API response data with a lot of properties, how to make this process more efficiently.
 
-You can simply copy to response data in JSON form then use below tools to help convert JSON to type.
+You can simply copy to response data in JSON form then use below tools to help convert JSON to type, don't forget to make sure the type generate by below fit the actual data from the server.
 
 [transform](https://transform.tools/json-to-jsdoc) is an online converter which can help user convert many source format to many output format including JSON to JSDoc and TypeScript definition.
 
@@ -521,7 +521,7 @@ There are two options to enabled type checking in VSCode, by file or by project 
 
 ### Checking by file
 
-To enable type checking for specify file, add comment `// @ts-check` at the first line of file.
+To enabled type checking for specify file, add comment `// @ts-check` at the first line of file.
 
 ```javascript
 // @ts-check
@@ -600,5 +600,7 @@ $ npm run check:watch
 ## Summary
 
 You can get the advantage of both statically type checking and compile time checking by leveraging JSDoc, TypeScript, and VSCode, even you are developing a JavaScript project, you don't need to compromise.
+
+Don't forget to read VSCode docs [Working with JavaScript](https://code.visualstudio.com/docs/nodejs/working-with-javascript) which still contain many information I haven't cover in this article.
 
 If you have any question please comment below or go to repository mentioned above and file an issue.
