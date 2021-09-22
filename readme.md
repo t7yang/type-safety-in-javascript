@@ -316,6 +316,14 @@ const mix = { foo: 'foo', bar: 'bar' };
  * Don't forget the parenthesis
  */
 const foo = /** @type {{ foo: string }} */ (JSON.parse('{ "foo": "bar" }'));
+
+/**
+ * Cast also support for `const` keyword (TS 4.5)
+ * {@link https://github.com/microsoft/TypeScript/pull/45464}
+ */
+const CONST_VALUE = /** @tgpe {const} */ {
+  foo: 'bar',
+};
 ```
 
 ## Template and conditional type
