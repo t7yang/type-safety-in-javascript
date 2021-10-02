@@ -321,7 +321,7 @@ const foo = /** @type {{ foo: string }} */ (JSON.parse('{ "foo": "bar" }'));
  * Cast also support for `const` keyword (TS 4.5)
  * {@link https://github.com/microsoft/TypeScript/pull/45464}
  */
-const CONST_VALUE = /** @tgpe {const} */ {
+const CONST_VALUE = /** @type {const} */ {
   foo: 'bar',
 };
 ```
@@ -395,7 +395,7 @@ const pikachu = { name: 'Pikachu', attack: 55, speed: 90 };
  * Import type from node_modules
  * Make sure install `@types/express` first
  * @type {import('express').RequestHandler}
- * @example signture:
+ * @example signature:
  * const handler: e.RequestHandler<ParamsDictionary, any, any, qs.ParsedQs, Record<string, any>>
  */
 const handler = async (req, rep) => {
@@ -475,7 +475,7 @@ const handler = async (req, rep) => {
 
 Not only for library, sometime you need to type your API response data with a lot of properties, how to make this process more efficiently.
 
-You can simply copy to response data in JSON form then use below tools to help convert JSON to type, don't forget to make sure the type generate by below fit the actual data from the server.
+You can simply copy to response data in JSON form then use below tools to help convert JSON to type, don't forget to make sure the type generate by tools below fit the actual data from the server.
 
 [transform](https://transform.tools/json-to-jsdoc) is an online converter which can help user convert many source format to many output format including JSON to JSDoc and TypeScript definition.
 
@@ -531,7 +531,7 @@ To enabled type checking for specify file, add comment `// @ts-check` at the fir
 const name = 123;
 ```
 
-Enabling type checking by file is very helpful for progressively enhance your project's type safety.
+Enabled type checking by file is very helpful for progressively enhance your project's type safety.
 
 ### Checking by project folder
 

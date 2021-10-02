@@ -53,6 +53,6 @@ const foo = /** @type {{ foo: string }} */ (JSON.parse('{ "foo": "bar" }'));
  * Cast also support for `const` keyword (TS 4.5)
  * {@link https://github.com/microsoft/TypeScript/pull/45464}
  */
-const CONST_VALUE = /** @tgpe {const} */ {
+const CONST_VALUE = /** @type {const} */ {
   foo: 'bar',
 };
