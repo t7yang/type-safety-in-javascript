@@ -436,12 +436,7 @@ export type Color = Rgb | Rbgs | string;
  * @property {number} blue
  */
 
-/**
- * @typedef {object} Alpha
- * @property {number} alpha
- */
-
-/** @typedef {Rgb & Alpha} Rgba */
+/** @typedef {Rgb & { alpha: number }} Rgba */
 
 /** @typedef {Rgb | Rgba | string} Color */
 ```
