@@ -41,7 +41,7 @@ function addDec(x, y) {
  * @param {number=} y number or undefined
  * @param {number} [z=1] optional with default (default not show in type hint)
  */
-function jsDocOptional(x, y, z) {}
+function jsDocOptional(x, y, z = 1) {}
 
 // ######
 // Rest Parameter
