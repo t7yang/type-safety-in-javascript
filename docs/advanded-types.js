@@ -51,8 +51,6 @@ const foo = /** @type {{ foo: string }} */ (JSON.parse('{ "foo": "bar" }'));
 
 /**
  * Cast also support for `const` keyword (TS 4.5)
- * {@link https://github.com/microsoft/TypeScript/pull/45464}
+ * {@link https://devblogs.microsoft.com/typescript/announcing-typescript-4-5/#jsdoc-const-and-type-arg-defaults}
  */
-const CONST_VALUE = /** @type {const} */ {
-  foo: 'bar',
-};
+const CONST_VALUE = /** @type {const} */ ({ foo: 'bar' });
