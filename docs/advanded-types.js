@@ -45,7 +45,7 @@ const mix = { foo: 'foo', bar: 'bar' };
 
 /**
  * Force value to some type with cast
- * Don't forget the parenthesis
+ * Don't forget the parentheses
  */
 const foo = /** @type {{ foo: string }} */ (JSON.parse('{ "foo": "bar" }'));
 
